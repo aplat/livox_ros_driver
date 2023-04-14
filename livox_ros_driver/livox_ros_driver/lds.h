@@ -229,6 +229,16 @@ typedef struct {
   uint8_t line;       /**< Laser line id     */
 } LivoxPointXyzrtl;
 
+typedef struct {
+  float x;              /**< X axis, Unit:m */
+  float y;              /**< Y axis, Unit:m */
+  float z;              /**< Z axis, Unit:m */
+  uint8_t reflectivity; /**< Reflectivity   */
+  uint8_t tag;          /**< Livox point tag   */
+  uint8_t line;         /**< Laser line id     */
+  double timestamp;     /**< timestamp     */
+} LivoxPointXyzrtlt;
+
 #pragma pack()
 
 typedef uint8_t *(*PointConvertHandler)(uint8_t *point_buf, \
